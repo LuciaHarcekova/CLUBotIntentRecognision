@@ -33,7 +33,7 @@ Intent recognition, is a natural language processing technique used to identify 
 <img src="https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/Assets/add_entity.png" alt="add_entity"/>
 3. After that step by step add Intent+Utterance couples, in each Utterance tag entities.
 
-<img src="https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/assets/Data_labeling.png" alt="Data_labeling"/>
+<img src="https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/Assets/Data_labeling.png" alt="Data_labeling"/>
 
 
 <img src="https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/Assets/data_labeled.png" alt="data_labeled"/>
@@ -62,23 +62,22 @@ After we created the model, let's connect it with our VS Bot Framework project. 
 <img src="https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/Assets/echo_bot.png" alt="echo_bot"/>
 
 2. Install the Azure Cognitive Language Services Conversations client library for .NET with NuGet:
+  ```
   dotnet add package Azure.AI.Language.Conversations
-
+```
 3. Add the connection with the model. 
 In order to interact with the Conversations service, you'll need to create an instance of the ConversationAnalysisClient class. 
 You will need an endpoint, and an API key to instantiate a client object. You will get them from the "Overview page" of the "Language" resource in the Azure Portal.
 <img src="https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/Assets/portal_manage_keys.png" alt="portal_manage_keys"/>
-
+```
   Uri endpoint = new Uri("https://myaccount.cognitive.microsoft.com");
   AzureKeyCredential credential = new AzureKeyCredential("{api-key}");
   ConversationAnalysisClient client = new ConversationAnalysisClient(endpoint, credential);
-  
+```  
 4. Rest of the code changes are in file [RecognizeIntentBot.cs](https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/CLUBotIntentRecognision/Bots/RecognizeIntentBot.cs)
-
 
 ## Enjoy the bot
 <img src="https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/Assets/dialog_example.png" alt="dialog_example"/>
-
 
 ## Resources
 - [Quickstart: Conversational language understanding](https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/conversational-language-understanding/quickstart?pivots=language-studio)
