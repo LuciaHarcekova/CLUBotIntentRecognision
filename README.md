@@ -20,18 +20,18 @@ Intent recognition, is a natural language processing technique used to identify 
 #### Create project
 1. In the Choose a [language resource](https://language.cognitive.azure.com/) window that appears, find your Azure subscription, and choose your Language resource. If you don't have a resource, you can create a new one.
 2. Create a conversational language understanding project.
-<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/assets/create_clu_project.png" alt="create_clu_project"/>
+<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/Assets/create_clu_project.png" alt="create_clu_project"/>
 
 ## Build schema and label utterances
 1/ Go to the "Schema defnition" and click the "+Add" button to create a new schema.
-<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/assets/Add_intent.png" alt="Add_intent"/>
-<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/assets/add_entity.png" alt="add_entity"/>
+<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/Assets/Add_intent.png" alt="Add_intent"/>
+<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/Assets/add_entity.png" alt="add_entity"/>
 
 
 <img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/assets/Data_labeling.png" alt="Data_labeling"/>
 
 
-<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/assets/data_labeled.png" alt="data_labeled"/>
+<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/Assets/data_labeled.png" alt="data_labeled"/>
 
 ### Train model
 1. Select "Training jobs" from the left side menu.
@@ -39,7 +39,7 @@ Intent recognition, is a natural language processing technique used to identify 
 3. Select training mode. You can choose Standard training for faster training, but it is only available for English. Or you can choose Advanced training which is supported for other languages and multilingual projects, but it involves longer training times. Learn more about training modes.
 4. Select a data splitting method. You can choose Automatically splitting the testing set from training data where the system will split your utterances between the training and testing sets, according to the specified percentages. Or you can Use a manual split of training and testing data, this option is only enabled if you have added utterances to your testing set when you labeled your utterances.
 5. Click the "Train" button.
-<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/assets/train_model.png" alt="train_model"/>
+<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/Assets/train_model.png" alt="train_model"/>
 
 ### Deploy model
 1. Select "Deploying a model" from the left side menu.
@@ -47,14 +47,14 @@ Intent recognition, is a natural language processing technique used to identify 
 3. Select Create a new deployment name to create a new deployment and assign a trained model from the dropdown below. You can otherwise select Overwrite an existing deployment name to effectively replace the model that's used by an existing deployment.
 4. Select a trained model from previous part.
 5. Select Deploy to start the deployment job.
-<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/assets/deploy_model.png" alt="deploy_model"/>
+<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/Assets/deploy_model.png" alt="deploy_model"/>
 
 
 ## Run the code
 After we created the model, let's connect it with our VS Bot Framework project. I have used prebuild solution and then created a connection to call the model, I have created.
 
 1. Build the basics Bot Framework project. I have used "Echo Bot" as a starting point.
-<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/assets/echo_bot.png" alt="echo_bot"/>
+<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/Assets/echo_bot.png" alt="echo_bot"/>
 
 2. Install the Azure Cognitive Language Services Conversations client library for .NET with NuGet:
   dotnet add package Azure.AI.Language.Conversations
@@ -62,7 +62,7 @@ After we created the model, let's connect it with our VS Bot Framework project. 
 3. Add the connection with the model. 
 In order to interact with the Conversations service, you'll need to create an instance of the ConversationAnalysisClient class. 
 You will need an endpoint, and an API key to instantiate a client object. You will get them from the "Overview page" of the "Language" resource in the Azure Portal.
-<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/assets/portal_manage_keys.png" alt="portal_manage_keys"/>
+<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/Assets/portal_manage_keys.png" alt="portal_manage_keys"/>
 
   Uri endpoint = new Uri("https://myaccount.cognitive.microsoft.com");
   AzureKeyCredential credential = new AzureKeyCredential("{api-key}");
@@ -72,7 +72,7 @@ You will need an endpoint, and an API key to instantiate a client object. You wi
 
 
 ## Enjoy the bot
-<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/assets/dialog_example.png" alt="dialog_example"/>
+<img src="https://github.com/LuciaHarcekova/ChatGPTMSBotFrameworkWithOpenAI/blob/master/Assets/dialog_example.png" alt="dialog_example"/>
 
 
 ## Resources
