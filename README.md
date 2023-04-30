@@ -12,7 +12,7 @@ Intent recognition, is a natural language processing technique used to identify 
 ## Quickstart
 
 ### Create Azure resource
-1. Go to Azure portal and create "lanaguge" resource.
+1. Go to [Azure portal](https://ms.portal.azure.com/#home) and create "Languge" resource.
 
 ### Create and train your model
 1. Go to the Language Studio and sign in with your Azure account.
@@ -20,13 +20,18 @@ Intent recognition, is a natural language processing technique used to identify 
 #### Create project
 1. In the Choose a [language resource](https://language.cognitive.azure.com/) window that appears, find your Azure subscription, and choose your Language resource. If you don't have a resource, you can create a new one.
 2. Create a conversational language understanding project.
-<img src="https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/Assets/create_clu_project.png" alt="create_clu_project"/>
+<img src="https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/Assets/Create_clu_project.png" alt="create_clu_project"/>
 
-## Build schema and label utterances
-1/ Go to the "Schema defnition" and click the "+Add" button to create a new schema.
+## Build schema
+1. Go to the "Schema defnition" and click the "+Add" button to create a new schema.
+2. Add the new intents. 
 <img src="https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/Assets/Add_intent.png" alt="Add_intent"/>
-<img src="https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/Assets/add_entity.png" alt="add_entity"/>
 
+## Label utterances
+1. Navigate to the "Data labeling".
+2. And add the new Entities.
+<img src="https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/Assets/add_entity.png" alt="add_entity"/>
+3. After that step by step add Intent+Utterance couples, in each Utterance tag entities.
 
 <img src="https://github.com/LuciaHarcekova/CLUBotIntentRecognision/blob/master/assets/Data_labeling.png" alt="Data_labeling"/>
 
